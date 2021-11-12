@@ -1,0 +1,91 @@
+body {
+    background: gray;
+}
+
+.img-top img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.container {
+    margin: 0 200px 0 200px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-overlay {
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 250px;
+}
+
+.mt-5 {
+    margin-top: 5%;
+}
+
+.card-overlay .img-top {
+    position: relative;
+}
+
+.card-overlay {
+    position: relative;
+    justify-content: center;
+    transition: .5s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-overlay .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #393939da;
+    z-index: 0;
+    width: 300px;
+    height: 200px;
+    bottom: 0;
+    opacity: 0;
+    border-radius: 10px;
+    transition: .5s all;
+}
+
+.card-overlay .content:hover {
+    opacity: 1;
+}
+
+.card-overlay .btn {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    margin: 75px 50px 50px 50px;
+    z-index: 1;
+}
+
+.card-overlay .btn:hover {
+    cursor: pointer;
+}
+
+.card-overlay:hover {
+    transform: scale(1.2, 1.2);
+}
+
+@media screen and (max-width:780px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .container {
+        margin: 30px 200px 50px 23px;
+    }
+    .card-overlay:hover {
+        transform: scale(1.125, 1.125);
+    }
+}
